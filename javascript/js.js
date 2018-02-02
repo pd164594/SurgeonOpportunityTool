@@ -4,21 +4,21 @@ $("#submit").on("click", function(){
 
   // Calculate Annual Patient Volume
   const weeklyPatientVolume = $("#weeklyPatientVolume").val();
-  const annualPatientVolume = weeklyPatientVolume * 52;
+  const annualPatientVolume = weeklyPatientVolume * 48;
   $("#annualPatientVolume").text(annualPatientVolume);
 
   // Calculate Annual Surgical Volume
   const weeklySurgicalVolume = $("#weeklySurgicalVolume").val();
-  const annualSurgicalVolume = weeklySurgicalVolume * 52; 
+  const annualSurgicalVolume = weeklySurgicalVolume * 48; 
   $("#annualSurgicalVolume").text(annualSurgicalVolume);
 
   // Calculate Annual No Show Volume
   const weeklyNoShowVolume = $("#weeklyNoShowVolume").val();
-  const annualNoShowVolume = weeklyNoShowVolume * 52; 
+  const annualNoShowVolume = weeklyNoShowVolume * 48; 
   $("#annualNoShowVolume").text(annualNoShowVolume);
 
   // Creating a variable for annual Charges. 
-  const annualChargers = $("#annualCharges").val();
+  const annualCharges = $("#annualCharges").val();
 
   // Calculating Surgery Conversion Ratio
   const surgeryConversion = annualSurgicalVolume/annualPatientVolume;
@@ -40,8 +40,25 @@ $("#submit").on("click", function(){
   $("#additionalSurgicalVolume").text(additionalSurgicalVolume);
 
   // Calculating the possible Surgical loss due to no shows. 
-  const possibleSurgicalVolumeLoss = annualNoShowVolume * surgeryConversion;
+  const possibleSurgicalVolumeLoss = (annualNoShowVolume * surgeryConversion);
   $("#possibleSurgicalVolumeLoss").text(possibleSurgicalVolumeLoss);
+
+
+  // Creating variable for the average Charge Per Surgery
+  const averageChargePerSurgery = $("#averageChargePerSurgery").val();
+
+
+  // Calculating the Surgery Income Loss due to No Shows
+  const pontentialLossSurgeryNoShow = (averageChargePerSurgery * possibleSurgicalVolumeLoss);
+  $("#surgeryLossNoShow").text(pontentialLossSurgeryNoShow);
+ 
+  // Calculating EST POS Collection
+  const estPOSCollection = ($("#estPOSCollection").val()/100);
+  const estPOSCollectionDollars = estPOSCollection * annualCharges ; 
+
+  $("#estPOSCollectionDollars").text(estPOSCollectionDollars);
+
+
 
 
 });
