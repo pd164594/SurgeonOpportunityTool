@@ -50,13 +50,34 @@ $("#submit").on("click", function(){
 
   // Calculating the Surgery Income Loss due to No Shows
   const pontentialLossSurgeryNoShow = (averageChargePerSurgery * possibleSurgicalVolumeLoss);
-  $("#surgeryLossNoShow").text(pontentialLossSurgeryNoShow);
+  $("#surgeryLossNoShow").text(Math.ceil(pontentialLossSurgeryNoShow));
  
   // Calculating EST POS Collection
   const estPOSCollection = ($("#estPOSCollection").val()/100);
   const estPOSCollectionDollars = estPOSCollection * annualCharges ; 
+  $("#estPOSCollectionDollars").text(Math.ceil(estPOSCollectionDollars));
 
-  $("#estPOSCollectionDollars").text(estPOSCollectionDollars);
+  // Calculating the Cost to Collect POS
+  const costCollectPOS = ($("#costCollectPOS").val()/100);
+  const costCollectionPOSDollars = costCollectPOS * estPOSCollectionDollars;
+  $("#costCollectPOSDollars").text(costCollectionPOSDollars);
+
+  // Calculating the Current POS cost
+  const currentPOS = ($("#currentPOS").val()/100);
+  const costPOSDollars = currentPOS * annualCharges;
+  $("#currentPOSDollars").text(costPOSDollars);
+
+  // Calculating the Current POS Collection Cost
+  const currenctPOSCollectionCost = (estPOSCollectionDollars - costPOSDollars) * costCollectPOS;
+  console.log(currenctPOSCollectionCost);
+  $("#currentPOSCollectionCost").text(currenctPOSCollectionCost);
+
+  // Calculating the Cost to Collect Opp New Goal
+  const costCollectGoal = ($("#costCollectGoal").val()/100);
+  const costCollectGoalDollar = (estPOSCollectionDollars-(annualCharges * costCollectGoal)) * costCollectPOS 
+  $("#costCollectGoalDollar").text(costCollectGoalDollar);
+
+
 
 
 
