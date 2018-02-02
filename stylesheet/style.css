@@ -4,15 +4,29 @@ body{
 
 
 .header{
-  text-align: center;
   background: gold;
 }
-
-input{
-  margin-left: 25%;
+.datapoint{
+  text-align: center;
+}
+.weekly .yearly{
+  text-align: left;
 }
 
+
 .odd{
-  background: grey;
+  background: #b2b4ae;
   padding:10px;
+  line-height: 25px;
+}
+
+.even{
+  background: #85458a;
+  padding:10px;
+  line-height: 25px;
+}
+
+
+input{
+  text-align: center;
 }
