@@ -39,7 +39,9 @@ $("#submit").on("click", function(){
   const additionalSurgicalVolume = (annualNoShowVolume - newNoShowNumber) * surgeryConversion;
   $("#additionalSurgicalVolume").text(additionalSurgicalVolume);
 
-
+  // Calculating the possible Surgical loss due to no shows. 
+  const possibleSurgicalVolumeLoss = annualNoShowVolume * surgeryConversion;
+  $("#possibleSurgicalVolumeLoss").text(possibleSurgicalVolumeLoss);
 
 
 });
