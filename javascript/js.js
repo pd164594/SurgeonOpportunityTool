@@ -77,10 +77,14 @@ $("#submit").on("click", function(){
   const costCollectGoalDollar = (estPOSCollectionDollars-(annualCharges * costCollectGoal)) * costCollectPOS 
   $("#costCollectGoalDollar").text(costCollectGoalDollar);
 
+  // Calculating the denied Claims
+  const denialPercent = ($("#denialPercent").val()/100);
+  const denialTotal = (annualPatientVolume + annualSurgicalVolume) * denialPercent;
+  $("#denialTotal").text(denialTotal);
 
-
-
-
+  // Calculating the Average Charge Per Pt. Visit. 
+  const avgChargePtVisit = annualCharges/(annualSurgicalVolume + annualPatientVolume)
+  $("#avgChargePtVisit").text(avgChargePtVisit);
 
 });
 
