@@ -27,26 +27,26 @@ $("#submit").on("click", function(){
 
   // Calculating Surgery Conversion Ratio
   const surgeryConversion = annualSurgicalVolume/annualPatientVolume;
-  $("#surgeryConversion").text((surgeryConversion*100) + "%");
+  $("#surgeryConversion").text(Math.ceil((surgeryConversion*100)) + "%");
 
   // Calculating No Show Rate
   const noShowRate = annualNoShowVolume/annualPatientVolume;
-  $("#noShowRate").text((noShowRate*100) + "%");
+  $("#noShowRate").text(Math.ceil((noShowRate*100)) + "%");
 
   // Creating Variable for New Now Show Goal;
   const newNoShowRate = $("#noShowGoal").val()/100; 
 
   // Calculating the New No Show Number. 
   const newNoShowNumber = newNoShowRate * annualPatientVolume; 
-  $("#newNoShow").text(newNoShowNumber);
+  $("#newNoShow").text(Math.ceil(newNoShowNumber));
 
   // Calculating the New Potential Surgerys with a lower no show rate. 
   const additionalSurgicalVolume = (annualNoShowVolume - newNoShowNumber) * surgeryConversion;
-  $("#additionalSurgicalVolume").text(additionalSurgicalVolume);
+  $("#additionalSurgicalVolume").text(Math.ceil(additionalSurgicalVolume));
 
   // Calculating the possible Surgical loss due to no shows. 
   const possibleSurgicalVolumeLoss = (annualNoShowVolume * surgeryConversion);
-  $("#possibleSurgicalVolumeLoss").text(possibleSurgicalVolumeLoss);
+  $("#possibleSurgicalVolumeLoss").text(Math.ceil(possibleSurgicalVolumeLoss));
 
 
   // Creating variable for the average Charge Per Surgery
@@ -55,32 +55,32 @@ $("#submit").on("click", function(){
 
   // Calculating the Surgery Income Loss due to No Shows
   const pontentialLossSurgeryNoShow = (averageChargePerSurgery * possibleSurgicalVolumeLoss);
-  $("#surgeryLossNoShow").text(Math.ceil(pontentialLossSurgeryNoShow));
+  $("#surgeryLossNoShow").text(accounting.formatMoney(pontentialLossSurgeryNoShow));
  
   // Calculating EST POS Collection
   const estPOSCollection = ($("#estPOSCollection").val()/100);
   const estPOSCollectionDollars = estPOSCollection * annualCharges ; 
-  $("#estPOSCollectionDollars").text(Math.ceil(estPOSCollectionDollars));
+  $("#estPOSCollectionDollars").text(accounting.formatMoney(estPOSCollectionDollars));
 
   // Calculating the Cost to Collect POS
   const costCollectPOS = ($("#costCollectPOS").val()/100);
   const costCollectionPOSDollars = costCollectPOS * estPOSCollectionDollars;
-  $("#costCollectPOSDollars").text(costCollectionPOSDollars);
+  $("#costCollectPOSDollars").text(accounting.formatMoney(costCollectionPOSDollars));
 
   // Calculating the Current POS cost
   const currentPOS = ($("#currentPOS").val()/100);
   const costPOSDollars = currentPOS * annualCharges;
-  $("#currentPOSDollars").text(costPOSDollars);
+  $("#currentPOSDollars").text(accounting.formatMoney(costPOSDollars));
 
   // Calculating the Current POS Collection Cost
   const currenctPOSCollectionCost = (estPOSCollectionDollars - costPOSDollars) * costCollectPOS;
   console.log(currenctPOSCollectionCost);
-  $("#currentPOSCollectionCost").text(currenctPOSCollectionCost);
+  $("#currentPOSCollectionCost").text(accounting.formatMoney(currenctPOSCollectionCost));
 
   // Calculating the Cost to Collect Opp New Goal
   const costCollectGoal = ($("#costCollectGoal").val()/100);
   const costCollectGoalDollar = (estPOSCollectionDollars-(annualCharges * costCollectGoal)) * costCollectPOS 
-  $("#costCollectGoalDollar").text(costCollectGoalDollar);
+  $("#costCollectGoalDollar").text(accounting.formatMoney(costCollectGoalDollar));
 
   // Calculating the denied Claims
   const denialPercent = ($("#denialPercent").val()/100);
@@ -89,11 +89,11 @@ $("#submit").on("click", function(){
 
   // Calculating the Average Charge Per Pt. Visit. 
   const avgChargePtVisit = annualCharges/(annualSurgicalVolume + annualPatientVolume)
-  $("#avgChargePtVisit").text(avgChargePtVisit);
+  $("#avgChargePtVisit").text(accounting.formatMoney(avgChargePtVisit));
 
   // Calculating the Dollars at Risk;
   const dollarsAtRisk = avgChargePtVisit * denialTotal;
-  $("#dollarsAtRisk").text(dollarsAtRisk);
+  $("#dollarsAtRisk").text(accounting.formatMoney(dollarsAtRisk));
 
   // Calculating New Surgery Counts. 
   const surgeryVisitRatio = ($("#surgeryVisitRatio").val()/100);
@@ -102,7 +102,7 @@ $("#submit").on("click", function(){
 
   // Calculating possible amount 
   const possibleIncome = averageChargePerSurgery * newSurgeryCount;
-  $("#possibleIncome").text(possibleIncome);
+  $("#possibleIncome").text(accounting.formatMoney(possibleIncome));
 
 
 

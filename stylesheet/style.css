@@ -1,4 +1,18 @@
-.header{
-  text-align: left;
+body{
+  font-family: "Arial Black", "Arial Bold", Gadget, sans-serif;
 }
 
+
+.header{
+  text-align: center;
+  background: gold;
+}
+
+input{
+  margin-left: 25%;
+}
+
+.odd{
+  background: grey;
+  padding:10px;
+}
