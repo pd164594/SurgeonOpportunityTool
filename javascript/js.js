@@ -28,6 +28,20 @@ $("#submit").on("click", function(){
   const noShowRate = annualNoShowVolume/annualPatientVolume;
   $("#noShowRate").text((noShowRate*100) + "%");
 
+  // Creating Variable for New Now Show Goal;
+  const newNoShowRate = $("#noShowGoal").val()/100; 
+
+  // Calculating the New No Show Number. 
+  const newNoShowNumber = newNoShowRate * annualPatientVolume; 
+  $("#newNoShow").text(newNoShowNumber);
+
+  // Calculating the New Potential Surgerys with a lower no show rate. 
+  const additionalSurgicalVolume = (annualNoShowVolume - newNoShowNumber) * surgeryConversion;
+  $("#additionalSurgicalVolume").text(additionalSurgicalVolume);
+
+
+
+
 });
 
 
