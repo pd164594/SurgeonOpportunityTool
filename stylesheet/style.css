@@ -21,7 +21,7 @@ body{
 }
 
 .even{
-  background: #85458a;
+  /*background: #85458a;*/
   padding:10px;
   line-height: 25px;
 }
