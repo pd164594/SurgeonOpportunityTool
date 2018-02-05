@@ -16,58 +16,54 @@
             <div class="col-lg-4 weekly">Weekly</div>
             <div class="col-lg-4 yearly">Yearly</div>
         </div>
-            <br>
+         
         <div class="row even">
             <div class="col-lg-4">Number of Patients Each Week</div>
-            <div class="col-lg-4 input"><input type="number" id="weeklyPatientVolume"></input></div>
+            <div class="col-lg-4 input"><input class="surgeonInput" style="background: #4c7d7a" type="number" id="weeklyPatientVolume"></input></div>
             <div class="col-lg-4" id="annualPatientVolume"></div>
         </div>
-            <br>
+            
         <div class="row odd">
             <div class="col-lg-4">Number of Surgerys Each Week</div>
-            <div class="col-lg-4 input"><input type="number" id="weeklySurgicalVolume"></input></div>
+            <div class="col-lg-4 input"><input class="surgeonInput" type="number" style="background: #4c7d7a" id="weeklySurgicalVolume"></input></div>
             <div class="col-lg-4" id="annualSurgicalVolume"></div>
         </div>
-            <br>
+            
         <div class="row even">
             <div class="col-lg-4">Number of No Shows Each Week</div>
-            <div class="col-lg-4 input"><input type="number" id="weeklyNoShowVolume"></input></div>
+            <div class="col-lg-4 input"><input class="surgeonInput" style="background: #4c7d7a" type="number" id="weeklyNoShowVolume"></input></div>
             <div class="col-lg-4" id="annualNoShowVolume"></div>
         </div>
-            <br>
+            
         <div class="row odd">
             <div class="col-lg-4">Annual Charges</div>
             <div class="col-lg-4"></div>
-            <div class="col-lg-4 input"><input type="number" id="annualCharges"></input></div>
+            <div class="col-lg-4 input"><input class="surgeonInput" style="background: #4c7d7a" type="number" id="annualCharges"></input></div>
         </div>
-            <br>
+        
         <div class="row even">
             <div class="col-lg-4">Surgery Conversion Ratio</div>
             <div class="col-lg-4"></div>
             <div class="col-lg-4" id="surgeryConversion"></div>
         </div>
-            <br>
-
+            
         <div class="row odd">
             <div class="col-lg-4">No Show Rate</div>
             <div class="col-lg-4"></div>
             <div class="col-lg-4" id="noShowRate"></div>
         </div>
-            <br>
+            
         <div class="row even">
             <div class="col-lg-4">No Show Goal (in %)</div>
             <div class="col-lg-4"></div>
-            <div class="col-lg-4 input"><input type="number" id="noShowGoal"></input></div>
+            <div class="col-lg-4 input"><input style="background: #1c5687" class= "surgeonInput" type="number" id="noShowGoal"></input></div>
         </div>
-            <br>
-
+            
         <div class="row odd">
             <div class="col-lg-4">New No Show Number</div>
             <div class="col-lg-4"></div>
             <div class="col-lg-4" id="newNoShow"></div>
         </div>
-
-        <br>
 
         <div class="row even">
             <div class="col-lg-4">Possible Additional Surgery with Reduced No Shows</div>
@@ -75,57 +71,48 @@
             <div class="col-lg-4" id="additionalSurgicalVolume"></div>
         </div>
 
-        <br>
-
         <div class="row odd">
             <div class="col-lg-4">Possible Surgery Loss Due to no show</div>
             <div class="col-lg-4"></div>
             <div class="col-lg-4" id="possibleSurgicalVolumeLoss"></div>
         </div>
 
-        <br>
         <div class="row even">
             <div class="col-lg-4">Average Charge Per Surgery</div>
             <div class="col-lg-4"></div>
-            <div class="col-lg-4 input"><input type="number" id="averageChargePerSurgery"></input></div>
+            <div class="col-lg-4 input"><input style="background: #4c7d7a
+            " class= "surgeonInput" type="number" id="averageChargePerSurgery"></input></div>
         </div>
 
-        <br>
         <div class="row odd">
-            <div class="col-lg-4">Possible Surgery Income Losss due to no show</div>
+            <div class="col-lg-4">Possible Surgery Income Loss due to no show</div>
             <div class="col-lg-4"></div>
             <div class="col-lg-4" id="surgeryLossNoShow"></div>
         </div>
-        <br>
+
         <div class="row even">
             <div class="col-lg-4">EST POS Collection (in %)</div>
             <div class="col-lg-4 input"><input type="number" id="estPOSCollection" value="8"></input></div>
             <div class="col-lg-4" id="estPOSCollectionDollars"></div>
         </div>
 
-        <br>
         <div class="row odd">
             <div class="col-lg-4">Cost to Collect POS (in %)</div>
             <div class="col-lg-4 input"><input type="number" id="costCollectPOS" value="15"></input></div>
             <div class="col-lg-4" id="costCollectPOSDollars"></div>
         </div>
 
-
-          <br>
         <div class="row even">
             <div class="col-lg-4">Current POS Collection</div>
             <div class="col-lg-4 input"><input type="number" id="currentPOS" value="4"></input></div>
             <div class="col-lg-4" id="currentPOSDollars"></div>
         </div>
 
-        <br>
-
         <div class="row odd">
             <div class="col-lg-4">Current POS Collection Cost</div>
             <div class="col-lg-4"></div>
             <div class="col-lg-4" id="currentPOSCollectionCost"></div>
         </div>
-        <br>
 
         <div class="row even">
             <div class="col-lg-4">Cost to Collect Opp New Goal</div>
@@ -133,15 +120,11 @@
             <div class="col-lg-4" id="costCollectGoalDollar"></div>
         </div>
 
-        <br>
-
         <div class="row odd">
             <div class="col-lg-4">% of denials - claim count</div>
             <div class="col-lg-4 input"><input type="number" id="denialPercent" value="15"></input></div>
             <div class="col-lg-4" id="denialTotal"></div>
         </div>
-        
-        <br> 
 
         <div class="row even">
             <div class="col-lg-4">Average Charger Per Patient Visit</div>
@@ -149,15 +132,11 @@
             <div class="col-lg-4" id="avgChargePtVisit"></div>
         </div>
 
-        <br> 
-
         <div class="row odd">
             <div class="col-lg-4">Dollars At Risk Due to Denials</div>
             <div class="col-lg-4"></div>
             <div class="col-lg-4" id="dollarsAtRisk"></div>
         </div>
-
-        <br>
 
         <div class="row even">
             <div class="col-lg-4">Goal for Surgery to Visit Ration</div>
@@ -165,26 +144,17 @@
             <div class="col-lg-4"></div>
         </div>
 
-
-        <br>
-
         <div class="row odd">
             <div class="col-lg-4">Possible new Surgeries Count</div>
             <div class="col-lg-4"></div>
             <div class="col-lg-4" id="newSurgeryCount"></div>
         </div>
-        <br>
 
          <div class="row even">
             <div class="col-lg-4">Possible added income if surgery ratio hits goal</div>
             <div class="col-lg-4"></div>
             <div class="col-lg-4" id="possibleIncome"></div>
         </div>
-
-
-
-
-        
 
         <br>
         <button id="submit">Calculate Opportunity</button>
