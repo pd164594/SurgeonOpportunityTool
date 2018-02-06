@@ -7,10 +7,15 @@ body{
 .header{
   background: gold;
   text-align: center;
+  height: 50px;
+  line-height: 50px;
+  font-size: 25px;
 }
+
 .datapoint{
   text-align: center;
 }
+
 .weekly .yearly{
   text-align: left;
 }
@@ -63,3 +68,4 @@ input{
 .surgeonInput{
   color: white;
 }
+

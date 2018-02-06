@@ -106,7 +106,10 @@ $("#submit").on("click", function(){
   $("#possibleIncome").text(accounting.formatMoney(possibleIncome));
 
 
-   $("#dollarOp").text(accounting.formatMoney(possibleIncome));
+   $("#dollarOp").text("Your Possible added income if Surgery Ratio Hits Goal: " + accounting.formatMoney(possibleIncome));
+
+   $("#dollarsRisk").text("Your Dollars at Risk Due to Denails: " + accounting.formatMoney(dollarsAtRisk))
+
    $("#successModal").modal("toggle");
 
 });
