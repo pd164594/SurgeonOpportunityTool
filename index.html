@@ -1,11 +1,13 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-150">
 
 <head>
+ <meta charset="UTF-8">
     <title>Surgeon Opportunity Calculator</title>
     <!-- Jquery Link -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="stylesheet/style.css">
 </head>
 
@@ -20,37 +22,37 @@
         <div class="row even">
             <div class="col-lg-4">Number of Patients Each Week</div>
             <div class="col-lg-4 input"><input class="surgeonInput" style="background: #4c7d7a" type="number" id="weeklyPatientVolume"></input></div>
-            <div class="col-lg-4" id="annualPatientVolume"></div>
+            <div class="col-lg-4 output" id="annualPatientVolume"></div>
         </div>
             
         <div class="row odd">
             <div class="col-lg-4">Number of Surgerys Each Week</div>
-            <div class="col-lg-4 input"><input class="surgeonInput" type="number" style="background: #4c7d7a" id="weeklySurgicalVolume"></input></div>
-            <div class="col-lg-4" id="annualSurgicalVolume"></div>
+            <div class="col-lg-4 input"><input  class="surgeonInput" type="number" style="background: #4c7d7a" id="weeklySurgicalVolume"></input></div>
+            <div class="col-lg-4 output" id="annualSurgicalVolume"></div>
         </div>
             
         <div class="row even">
             <div class="col-lg-4">Number of No Shows Each Week</div>
             <div class="col-lg-4 input"><input class="surgeonInput" style="background: #4c7d7a" type="number" id="weeklyNoShowVolume"></input></div>
-            <div class="col-lg-4" id="annualNoShowVolume"></div>
+            <div class="col-lg-4 output" id="annualNoShowVolume"></div>
         </div>
             
         <div class="row odd">
             <div class="col-lg-4">Annual Charges</div>
             <div class="col-lg-4"></div>
-            <div class="col-lg-4 input"><input class="surgeonInput" style="background: #4c7d7a" type="number" id="annualCharges"></input></div>
+            <div class="col-lg-4 input"><span class="currencyInput">$<input class="surgeonInput" lang="en-150" style="background: #4c7d7a" type="number" id="annualCharges"></input></span></div>
         </div>
         
         <div class="row even">
             <div class="col-lg-4">Surgery Conversion Ratio</div>
             <div class="col-lg-4"></div>
-            <div class="col-lg-4" id="surgeryConversion"></div>
+            <div class="col-lg-4 output" id="surgeryConversion"></div>
         </div>
             
         <div class="row odd">
             <div class="col-lg-4">No Show Rate</div>
             <div class="col-lg-4"></div>
-            <div class="col-lg-4" id="noShowRate"></div>
+            <div class="col-lg-4 output" id="noShowRate"></div>
         </div>
             
         <div class="row even">
@@ -62,107 +64,136 @@
         <div class="row odd">
             <div class="col-lg-4">New No Show Number</div>
             <div class="col-lg-4"></div>
-            <div class="col-lg-4" id="newNoShow"></div>
+            <div class="col-lg-4 output" id="newNoShow"></div>
         </div>
 
         <div class="row even">
             <div class="col-lg-4">Possible Additional Surgery with Reduced No Shows</div>
             <div class="col-lg-4"></div>
-            <div class="col-lg-4" id="additionalSurgicalVolume"></div>
+            <div class="col-lg-4 output" id="additionalSurgicalVolume"></div>
         </div>
 
         <div class="row odd">
             <div class="col-lg-4">Possible Surgery Loss Due to no show</div>
             <div class="col-lg-4"></div>
-            <div class="col-lg-4" id="possibleSurgicalVolumeLoss"></div>
+            <div class="col-lg-4 output" id="possibleSurgicalVolumeLoss"></div>
         </div>
 
         <div class="row even">
             <div class="col-lg-4">Average Charge Per Surgery</div>
             <div class="col-lg-4"></div>
-            <div class="col-lg-4 input"><input style="background: #4c7d7a
+            <div class="col-lg-4 input"><input style="background: #1c5687
             " class= "surgeonInput" type="number" id="averageChargePerSurgery"></input></div>
         </div>
 
         <div class="row odd">
             <div class="col-lg-4">Possible Surgery Income Loss due to no show</div>
             <div class="col-lg-4"></div>
-            <div class="col-lg-4" id="surgeryLossNoShow"></div>
+            <div class="col-lg-4 output" id="surgeryLossNoShow"></div>
         </div>
 
         <div class="row even">
             <div class="col-lg-4">EST POS Collection (in %)</div>
-            <div class="col-lg-4 input"><input type="number" id="estPOSCollection" value="8"></input></div>
-            <div class="col-lg-4" id="estPOSCollectionDollars"></div>
+            <div class="col-lg-4 input"><input style="background: #1c5687
+            " class= "surgeonInput" type="number" id="estPOSCollection" value="8"></input></div>
+            <div class="col-lg-4 output" id="estPOSCollectionDollars"></div>
         </div>
 
         <div class="row odd">
             <div class="col-lg-4">Cost to Collect POS (in %)</div>
-            <div class="col-lg-4 input"><input type="number" id="costCollectPOS" value="15"></input></div>
-            <div class="col-lg-4" id="costCollectPOSDollars"></div>
+            <div class="col-lg-4 input"><input style="background: #1c5687
+            " class= "surgeonInput" type="number" id="costCollectPOS" value="15"></input></div>
+            <div class="col-lg-4 output" id="costCollectPOSDollars"></div>
         </div>
 
         <div class="row even">
             <div class="col-lg-4">Current POS Collection</div>
-            <div class="col-lg-4 input"><input type="number" id="currentPOS" value="4"></input></div>
-            <div class="col-lg-4" id="currentPOSDollars"></div>
+            <div class="col-lg-4 input"><input style="background: #1c5687
+            " class= "surgeonInput" type="number" id="currentPOS" value="4"></input></div>
+            <div class="col-lg-4 output" id="currentPOSDollars"></div>
         </div>
 
         <div class="row odd">
             <div class="col-lg-4">Current POS Collection Cost</div>
             <div class="col-lg-4"></div>
-            <div class="col-lg-4" id="currentPOSCollectionCost"></div>
+            <div class="col-lg-4 output" id="currentPOSCollectionCost"></div>
         </div>
 
         <div class="row even">
             <div class="col-lg-4">Cost to Collect Opp New Goal</div>
-            <div class="col-lg-4 input"><input type="number" id="costCollectGoal" value="6"></input></div>
-            <div class="col-lg-4" id="costCollectGoalDollar"></div>
+            <div class="col-lg-4 input"><input style="background: #1c5687
+            " class= "surgeonInput" type="number" id="costCollectGoal" value="6"></input></div>
+            <div class="col-lg-4 output" id="costCollectGoalDollar"></div>
         </div>
 
         <div class="row odd">
             <div class="col-lg-4">% of denials - claim count</div>
-            <div class="col-lg-4 input"><input type="number" id="denialPercent" value="15"></input></div>
-            <div class="col-lg-4" id="denialTotal"></div>
+            <div class="col-lg-4 input"><input style="background: #1c5687
+            " class= "surgeonInput" type="number" id="denialPercent" value="15"></input></div>
+            <div class="col-lg-4 output" id="denialTotal"></div>
         </div>
 
         <div class="row even">
             <div class="col-lg-4">Average Charger Per Patient Visit</div>
             <div class="col-lg-4"></div>
-            <div class="col-lg-4" id="avgChargePtVisit"></div>
+            <div class="col-lg-4 output" id="avgChargePtVisit"></div>
         </div>
 
         <div class="row odd">
             <div class="col-lg-4">Dollars At Risk Due to Denials</div>
             <div class="col-lg-4"></div>
-            <div class="col-lg-4" id="dollarsAtRisk"></div>
+            <div class="col-lg-4 output" id="dollarsAtRisk"></div>
         </div>
 
         <div class="row even">
-            <div class="col-lg-4">Goal for Surgery to Visit Ration</div>
-            <div class="col-lg-4 input"><input type="number" id="surgeryVisitRatio" value="25"></input></div>
-            <div class="col-lg-4"></div>
+            <div class="col-lg-4">Goal for Surgery to Visit Ratio (%)</div>
+            <div class="col-lg-4 input"><input style="background: #1c5687
+            " class= "surgeonInput" type="number" id="surgeryVisitRatio" value="25"></input></div>
+            <div class="col-lg-4 output"></div>
         </div>
 
         <div class="row odd">
             <div class="col-lg-4">Possible new Surgeries Count</div>
             <div class="col-lg-4"></div>
-            <div class="col-lg-4" id="newSurgeryCount"></div>
+            <div class="col-lg-4 output" id="newSurgeryCount"></div>
         </div>
 
          <div class="row even">
             <div class="col-lg-4">Possible added income if surgery ratio hits goal</div>
             <div class="col-lg-4"></div>
-            <div class="col-lg-4" id="possibleIncome"></div>
+            <div class="col-lg-4 output" id="possibleIncome"></div>
         </div>
 
         <br>
-        <button id="submit">Calculate Opportunity</button>
-    
+        <button id="submit"type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Calculate Opportunity</button>
+
+        <!-- ///////////////////Modal/////////////////// -->
+ <div class="modal fade" tabindex="-1" role="dialog" id="successModal">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title">Your Opportunity</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p id="dollarOp">$</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-success" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+                <!-- /.modal-content -->
+            </div>
+            <!-- /.modal-dialog -->
+        </div>
+        <!-- /.modal -->
+<!-- ////////////////////////////////////////////////////// -->
 
     </div>
 
 
 </body>
 <script type="text/javascript" src="javascript/js.js"></script>
+ <script src="https://code.jquery.com/jquery.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 </html>

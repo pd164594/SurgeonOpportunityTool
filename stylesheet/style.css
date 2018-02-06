@@ -1,5 +1,6 @@
 body{
   font-family: "Arial Black", "Arial Bold", Gadget, sans-serif;
+
 }
 
 
@@ -16,7 +17,7 @@ body{
 
 
 .odd{
-  background: #b2b4ae;
+  /*background: #b2b4ae;*/
   padding:10px;
   line-height: 25px;
   text-align: center;
@@ -36,6 +37,24 @@ body{
 input{
   text-align: center;
   border-radius: 5px;
+}
+
+.input{
+  border-bottom: solid black;
+  margin-bottom: 0px;
+}
+
+#possibleIncome{
+  background: gold;
+}
+
+.output{
+  height: 34px;
+  border-bottom: solid black
+}
+
+.currencyinput {
+    border: 1px inset #ccc;
 }
 
 
