@@ -14,152 +14,152 @@
 <body>
     <div class="container">
         <div class="row header">
-            <div class="col-lg-4 datapoint">Data Point</div>
+            <div class="col-lg-4 datapointHeader">Data Point</div>
             <div class="col-lg-4 weekly">Weekly</div>
             <div class="col-lg-4 yearly">Yearly</div>
         </div>
          
         <div class="row even">
-            <div class="col-lg-4">Number of Patients Each Week</div>
+            <div class="col-lg-4 datapoint">Number of Patients Each Week</div>
             <div class="col-lg-4 input"><input class="surgeonInput" style="background: #4c7d7a" type="number" id="weeklyPatientVolume"></input></div>
             <div class="col-lg-4 output" id="annualPatientVolume"></div>
         </div>
             
         <div class="row odd">
-            <div class="col-lg-4">Number of Surgerys Each Week</div>
+            <div class="col-lg-4 datapoint">Number of Surgerys Each Week</div>
             <div class="col-lg-4 input"><input  class="surgeonInput" type="number" style="background: #4c7d7a" id="weeklySurgicalVolume"></input></div>
             <div class="col-lg-4 output" id="annualSurgicalVolume"></div>
         </div>
             
         <div class="row even">
-            <div class="col-lg-4">Number of No Shows Each Week</div>
+            <div class="col-lg-4 datapoint">Number of No Shows Each Week</div>
             <div class="col-lg-4 input"><input class="surgeonInput" style="background: #4c7d7a" type="number" id="weeklyNoShowVolume"></input></div>
             <div class="col-lg-4 output" id="annualNoShowVolume"></div>
         </div>
             
         <div class="row odd">
-            <div class="col-lg-4">Annual Charges</div>
+            <div class="col-lg-4 datapoint">Annual Charges</div>
             <div class="col-lg-4"></div>
             <div class="col-lg-4 input"><span class="currencyInput">$<input class="surgeonInput" lang="en-150" style="background: #4c7d7a" type="number" id="annualCharges"></input></span></div>
         </div>
         
         <div class="row even">
-            <div class="col-lg-4">Surgery Conversion Ratio</div>
+            <div class="col-lg-4 datapoint">Surgery Conversion Ratio</div>
             <div class="col-lg-4"></div>
             <div class="col-lg-4 output" id="surgeryConversion"></div>
         </div>
             
         <div class="row odd">
-            <div class="col-lg-4">No Show Rate</div>
+            <div class="col-lg-4 datapoint">No Show Rate</div>
             <div class="col-lg-4"></div>
             <div class="col-lg-4 output" id="noShowRate"></div>
         </div>
             
         <div class="row even">
-            <div class="col-lg-4">No Show Goal (in %)</div>
+            <div class="col-lg-4 datapoint">No Show Goal (in %)</div>
             <div class="col-lg-4"></div>
             <div class="col-lg-4 input"><input style="background: #1c5687" class= "surgeonInput" type="number" id="noShowGoal"></input></div>
         </div>
             
         <div class="row odd">
-            <div class="col-lg-4">New No Show Number</div>
+            <div class="col-lg-4 datapoint">New No Show Number</div>
             <div class="col-lg-4"></div>
             <div class="col-lg-4 output" id="newNoShow"></div>
         </div>
 
         <div class="row even">
-            <div class="col-lg-4">Possible Additional Surgery with Reduced No Shows</div>
+            <div class="col-lg-4 datapoint">Possible Additional Surgery with Reduced No Shows</div>
             <div class="col-lg-4"></div>
             <div class="col-lg-4 output" id="additionalSurgicalVolume"></div>
         </div>
 
         <div class="row odd">
-            <div class="col-lg-4">Possible Surgery Loss Due to no show</div>
+            <div class="col-lg-4 datapoint">Possible Surgery Loss Due to no show</div>
             <div class="col-lg-4"></div>
             <div class="col-lg-4 output" id="possibleSurgicalVolumeLoss"></div>
         </div>
 
         <div class="row even">
-            <div class="col-lg-4">Average Charge Per Surgery</div>
+            <div class="col-lg-4 datapoint">Average Charge Per Surgery</div>
             <div class="col-lg-4"></div>
             <div class="col-lg-4 input"><input style="background: #1c5687
             " class= "surgeonInput" type="number" id="averageChargePerSurgery"></input></div>
         </div>
 
         <div class="row odd">
-            <div class="col-lg-4">Possible Surgery Income Loss due to no show</div>
+            <div class="col-lg-4 datapoint">Possible Surgery Income Loss due to no show</div>
             <div class="col-lg-4"></div>
             <div class="col-lg-4 output" id="surgeryLossNoShow"></div>
         </div>
 
         <div class="row even">
-            <div class="col-lg-4">EST POS Collection (in %)</div>
+            <div class="col-lg-4 datapoint">EST POS Collection (in %)</div>
             <div class="col-lg-4 input"><input style="background: #1c5687
             " class= "surgeonInput" type="number" id="estPOSCollection" value="8"></input></div>
             <div class="col-lg-4 output" id="estPOSCollectionDollars"></div>
         </div>
 
         <div class="row odd">
-            <div class="col-lg-4">Cost to Collect POS (in %)</div>
+            <div class="col-lg-4 datapoint">Cost to Collect POS (in %)</div>
             <div class="col-lg-4 input"><input style="background: #1c5687
             " class= "surgeonInput" type="number" id="costCollectPOS" value="15"></input></div>
             <div class="col-lg-4 output" id="costCollectPOSDollars"></div>
         </div>
 
         <div class="row even">
-            <div class="col-lg-4">Current POS Collection</div>
+            <div class="col-lg-4 datapoint">Current POS Collection</div>
             <div class="col-lg-4 input"><input style="background: #1c5687
             " class= "surgeonInput" type="number" id="currentPOS" value="4"></input></div>
             <div class="col-lg-4 output" id="currentPOSDollars"></div>
         </div>
 
         <div class="row odd">
-            <div class="col-lg-4">Current POS Collection Cost</div>
+            <div class="col-lg-4 datapoint">Current POS Collection Cost</div>
             <div class="col-lg-4"></div>
             <div class="col-lg-4 output" id="currentPOSCollectionCost"></div>
         </div>
 
         <div class="row even">
-            <div class="col-lg-4">Cost to Collect Opp New Goal</div>
+            <div class="col-lg-4 datapoint">Cost to Collect Opp New Goal</div>
             <div class="col-lg-4 input"><input style="background: #1c5687
             " class= "surgeonInput" type="number" id="costCollectGoal" value="6"></input></div>
             <div class="col-lg-4 output" id="costCollectGoalDollar"></div>
         </div>
 
         <div class="row odd">
-            <div class="col-lg-4">% of denials - claim count</div>
+            <div class="col-lg-4 datapoint">% of denials - claim count</div>
             <div class="col-lg-4 input"><input style="background: #1c5687
             " class= "surgeonInput" type="number" id="denialPercent" value="15"></input></div>
             <div class="col-lg-4 output" id="denialTotal"></div>
         </div>
 
         <div class="row even">
-            <div class="col-lg-4">Average Charger Per Patient Visit</div>
+            <div class="col-lg-4 datapoint">Average Charger Per Patient Visit</div>
             <div class="col-lg-4"></div>
             <div class="col-lg-4 output" id="avgChargePtVisit"></div>
         </div>
 
         <div class="row odd">
-            <div class="col-lg-4">Dollars At Risk Due to Denials</div>
+            <div class="col-lg-4 datapoint">Dollars At Risk Due to Denials</div>
             <div class="col-lg-4"></div>
             <div class="col-lg-4 output" id="dollarsAtRisk" style="background: #85458a "></div>
         </div>
 
         <div class="row even">
-            <div class="col-lg-4">Goal for Surgery to Visit Ratio (%)</div>
+            <div class="col-lg-4 datapoint">Goal for Surgery to Visit Ratio (%)</div>
             <div class="col-lg-4 input"><input style="background: #1c5687
             " class= "surgeonInput" type="number" id="surgeryVisitRatio" value="25"></input></div>
             <div class="col-lg-4 output"></div>
         </div>
 
         <div class="row odd">
-            <div class="col-lg-4">Possible new Surgeries Count</div>
+            <div class="col-lg-4 datapoint">Possible new Surgeries Count</div>
             <div class="col-lg-4"></div>
             <div class="col-lg-4 output" id="newSurgeryCount"></div>
         </div>
 
          <div class="row even">
-            <div class="col-lg-4">Possible added income if surgery ratio hits goal</div>
+            <div class="col-lg-4 datapoint">Possible added income if surgery ratio hits goal</div>
             <div class="col-lg-4"></div>
             <div class="col-lg-4 output" id="possibleIncome"></div>
         </div>
