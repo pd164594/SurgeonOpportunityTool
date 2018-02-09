@@ -70,7 +70,7 @@ $("#submit").on("click", function(){
 
   // Calculating the Current POS cost
   const currentPOS = ($("#currentPOS").val()/100);
-  const costPOSDollars = currentPOS * annualCharges;
+  const costPOSDollars = currentPOS * estPOSCollectionDollars;
   $("#currentPOSDollars").text(accounting.formatMoney(costPOSDollars));
 
   // Calculating the Current POS Collection Cost
@@ -80,8 +80,12 @@ $("#submit").on("click", function(){
 
   // Calculating the Cost to Collect Opp New Goal
   const costCollectGoal = ($("#costCollectGoal").val()/100);
-  const costCollectGoalDollar = (estPOSCollectionDollars-(annualCharges * costCollectGoal)) * costCollectPOS 
+  const costCollectGoalDollar = (estPOSCollectionDollars* costCollectGoal)
   $("#costCollectGoalDollar").text(accounting.formatMoney(costCollectGoalDollar));
+
+  // Calculating Saving with Increase POS. 
+  const savingsIncreasePOSDollars = (costCollectionPOSDollars - (estPOSCollectionDollars-costCollectGoalDollar) * costCollectPOS);
+$("#increasedSavings").text(accounting.formatMoney(savingsIncreasePOSDollars));
 
   // Calculating the denied Claims
   const denialPercent = ($("#denialPercent").val()/100);
