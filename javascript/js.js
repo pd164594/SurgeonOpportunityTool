@@ -112,7 +112,9 @@ $("#increasedSavings").text(accounting.formatMoney(savingsIncreasePOSDollars));
 
    $("#dollarOp").text("Your Possible added income if Surgery Ratio Hits Goal: " + accounting.formatMoney(possibleIncome));
 
-   $("#dollarsRisk").text("Your Dollars at Risk Due to Denails: " + accounting.formatMoney(dollarsAtRisk))
+   $("#dollarsRisk").text("Your Dollars at Risk Due to Denials: " + accounting.formatMoney(dollarsAtRisk));
+
+   $("#savingModal").text("Your savings with an Increased POS Collection: " + accounting.formatMoney(savingsIncreasePOSDollars));
 
    $("#successModal").modal("toggle");
 
