@@ -103,7 +103,7 @@ $("#increasedSavings").text(accounting.formatMoney(savingsIncreasePOSDollars));
   // Calculating New Surgery Counts. 
   const surgeryVisitRatio = ($("#surgeryVisitRatio").val()/100);
   const newSurgeryCount = (annualPatientVolume * surgeryVisitRatio) - annualSurgicalVolume;
-  $("#newSurgeryCount").text(newSurgeryCount);
+  $("#newSurgeryCount").text(Math.ceil(newSurgeryCount));
 
   // Calculating possible amount 
   const possibleIncome = averageChargePerSurgery * newSurgeryCount;
