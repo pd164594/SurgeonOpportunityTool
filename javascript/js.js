@@ -140,7 +140,7 @@ $("#increasedSavings").text(accounting.formatMoney(savingsIncreasePOSDollars, {
     precision: 0
   }));
 
-   $("#savingModal").text("Your Possible Expense Opportun: " + accounting.formatMoney(savingsIncreasePOSDollars,{
+   $("#savingModal").text("Your Possible Expense Opportunity: " + accounting.formatMoney(savingsIncreasePOSDollars,{
     precision: 0
   }));
 
