@@ -75,7 +75,7 @@ function DataModel() {
   this.possibleIncomeText = ko.computed(function() { return accounting.formatMoney(this.possibleIncome()) }, this);
 
   this.plainCSV = ko.computed(function() {
-    var csvContent = "Data point,Weekly,Yearly\r\n";
+    var csvContent = "Data point,Weekly,Yearly\r\n";e
     csvContent += "Number of patients each week," + this.weeklyPatientVolume() + "," + this.annualPatientVolume() + "\r\n";
     csvContent += "Number of surgeries each week," + this.weeklySurgeryVolume() + "," + this.annualSurgeryVolume() + "\r\n";
     csvContent += "Number of no shows each week," + this.weeklyNoShowVolume() + "," + this.annualNoShowVolume() + "\r\n";
